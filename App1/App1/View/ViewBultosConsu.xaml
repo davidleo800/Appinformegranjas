@@ -4,7 +4,7 @@
              x:Class="AppInformeGranjas.View.ViewBultosConsu">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
+            <Label Text="Formulario Bultos Consumidos"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
         </StackLayout>
