@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
+using AppInformeGranjas.Models;
 namespace AppInformeGranjas
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
@@ -16,5 +16,21 @@ namespace AppInformeGranjas
 		{
 			InitializeComponent ();
 		}
+
+		private async void btn2_click(object sender, EventArgs e) {
+
+			try {
+				ManagerMort manager = new ManagerMort();
+				var res = await manager.getMoritalidad();
+
+				if (res != null) {
+					lstMort.ItemsSource = res;
+				}
+			}
+			catch (Exception e1) {
+			
+			}
+		}
+
 	}
 }

@@ -2,11 +2,34 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppInformeGranjas.ViewMortalidad">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Formulario Mortalidad"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+    <ScrollView>
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
+
+            <Label Text="Bienvenido al informe de Granjas" FontSize="Large" />
+            <Label Text="Hoy:"/>
+            <DatePicker x:Name="date" />
+            <Label Text="Granja:"/>
+            
+            <Editor x:Name="editGranja" />
+            <Button x:Name="btn1" Text="Agregar datos"  />
+            <Button x:Name="btn2" Text="Mostrar lista" Clicked="btn2_click"/>
+            <ListView x:Name="lstMort">
+                <ListView.ItemTemplate >
+                    <DataTemplate >
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding codigo}"/>
+                                <Label Text="{Binding fecha}"/>
+                                <Label Text="{Binding granja}"/>
+                                <Label Text="{Binding galpon}"/>
+                                <Label Text="{Binding mortalidad}"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                
+            </ListView>
         </StackLayout>
-    </ContentPage.Content>
+       
+    </ScrollView>
 </ContentPage>
