@@ -9,7 +9,7 @@ namespace AppInformeGranjas.Models
 {
     class ManagerMort
     {
-        const String URL = "http://127.0.0.1/Webservicexamarin/WebService.php";
+        const String URL = "https://weakened-bet.000webhostapp.com/Webservicexamarin/WebService.php";
         private HttpClient getClient() {
 
             HttpClient client = new HttpClient();
