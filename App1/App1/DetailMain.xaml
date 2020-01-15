@@ -5,15 +5,18 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="AppInformeGranjas.DetailMain">
+    
     <ScrollView>
-        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-
-            <Label Text="Bienvenido al informe de Granjas" FontSize="Large" />
-            <Label Text="aquí podrá ingresar datos de Mortalidad, Bultos y peso promedio" FontSize="Medium" />
-            <Label Text="Seleccione una opcion para ingresar los datos correspondientes:" FontSize="Small" />
+        <StackLayout BackgroundColor="#939191">
+            <!-- Place new controls here -->
+            <Image Source="Image.splash" BackgroundColor="Beige" />
+            <Label Text="Bienvenido al informe de Granjas" TextColor="Black" HorizontalTextAlignment="Center" FontSize="Title" />
+            <Label Text="Aquí podrá ingresar datos de Mortalidad, Bultos y Peso Promedio" FontSize="Subtitle" TextColor="Black" HorizontalTextAlignment="Center" />
+            <Label Text="Seleccione una opcion para ingresar los datos correspondientes:" FontSize="Body" TextColor="Black" HorizontalTextAlignment="Start" VerticalTextAlignment="Start" />
             <Button x:Name="btnMort" Text="Mortalidad" />
             <Button x:Name="btnBultos" Text="Bultos consumidos" />
             <Button x:Name="btnPeso" Text="Peso Promedio" />
         </StackLayout>
     </ScrollView>
+    
 </ContentPage>
