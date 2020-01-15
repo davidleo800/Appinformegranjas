@@ -7,15 +7,34 @@
              x:Class="AppInformeGranjas.DetailMain">
     
     <ScrollView>
-        <StackLayout BackgroundColor="#939191">
+        <StackLayout BackgroundColor="#D4E1F4">
             <!-- Place new controls here -->
-            <Image Source="Image.splash" BackgroundColor="Beige" />
-            <Label Text="Bienvenido al informe de Granjas" TextColor="Black" HorizontalTextAlignment="Center" FontSize="Title" />
-            <Label Text="Aquí podrá ingresar datos de Mortalidad, Bultos y Peso Promedio" FontSize="Subtitle" TextColor="Black" HorizontalTextAlignment="Center" />
-            <Label Text="Seleccione una opcion para ingresar los datos correspondientes:" FontSize="Body" TextColor="Black" HorizontalTextAlignment="Start" VerticalTextAlignment="Start" />
-            <Button x:Name="btnMort" Text="Mortalidad" />
-            <Button x:Name="btnBultos" Text="Bultos consumidos" />
-            <Button x:Name="btnPeso" Text="Peso Promedio" />
+            <Label Text="Bienvenido al informe de Granjas" TextColor="Black" FontAttributes="Bold"
+                   HorizontalTextAlignment="Center" FontSize="Title" />
+            <Label Text="Aquí podrá ingresar datos de Mortalidad, Bultos y Peso Promedio"
+                   FontSize="Subtitle" TextColor="Black" HorizontalTextAlignment="Center" />
+            <Label Text="Seleccione una opción para ingresar los datos correspondientes:"
+                   FontSize="Body" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Start" />
+           
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60" />
+                    <RowDefinition Height="60" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button x:Name="btnMort" Text="Mortalidad" BackgroundColor="#429de3" TextColor="#ffffff"
+                        BorderColor="#3d85c6" Grid.Row="1" Grid.Column="0" />
+                <Button x:Name="btnBultos" Text="Bultos consumidos" BackgroundColor="#429de3" TextColor="#ffffff"
+                        BorderColor="#3d85c6" Grid.Row="1" Grid.Column="1" />
+                <Button x:Name="btnPeso" Text="Peso Promedio" BackgroundColor="#429de3" TextColor="#ffffff"
+                        BorderColor="#3d85c6" Grid.Row="1" Grid.Column="2" />
+            </Grid>
+
         </StackLayout>
     </ScrollView>
     

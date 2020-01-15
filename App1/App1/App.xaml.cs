@@ -11,7 +11,7 @@ namespace App1
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new AppInformeGranjas.Page1());
+            MainPage = new NavigationPage(new AppInformeGranjas.SplashPage());
         }
 
         protected override void OnStart()
