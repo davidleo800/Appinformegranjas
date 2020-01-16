@@ -15,9 +15,10 @@ namespace AppInformeGranjas
 		public ViewMortalidad ()
 		{
 			InitializeComponent ();
+			listaRegistros();
 		}
 
-		private async void btn2_click(object sender, EventArgs e) {
+		private async void listaRegistros() {
 
 			try {
 				ManagerMort manager = new ManagerMort();

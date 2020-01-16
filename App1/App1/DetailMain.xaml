@@ -15,7 +15,10 @@
                    FontSize="Subtitle" TextColor="Black" HorizontalTextAlignment="Center" />
             <Label Text="Seleccione una opción para ingresar los datos correspondientes:"
                    FontSize="Body" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Start" />
-           
+            <Label Text="Granja:"/>
+            <Editor x:Name="editGranja" />
+            <Label Text="Galpon:"/>
+            <Editor x:Name="editGalpon" />
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="60" />

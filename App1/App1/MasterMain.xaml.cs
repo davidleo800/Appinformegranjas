@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Android.Widget;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,12 @@ namespace AppInformeGranjas
         public MasterMain()
         {
             InitializeComponent();
+        }
+        
+        private async void btnIdentificar(object sender, EventArgs args)
+        {
+            var context = Android.App.Application.Context;
+            Toast.MakeText(context, "Identificacion", ToastLength.Long).Show();
         }
     }
 }

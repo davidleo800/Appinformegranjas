@@ -7,10 +7,8 @@
              x:Class="AppInformeGranjas.MasterMain"
              Title="Main">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout BackgroundColor="#D4E1F4">
+            <Button Text="Identificarme" BackgroundColor="Transparent" Clicked="btnIdentificar" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

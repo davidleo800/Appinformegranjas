@@ -3,16 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppInformeGranjas.ViewMortalidad">
     <ScrollView>
-        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="Center" BackgroundColor="#D4E1F4">
 
-            <Label Text="Bienvenido al informe de Granjas" FontSize="Large" />
-            <Label Text="Hoy:"/>
+            <Label Text="Mortalidad Diaria" HorizontalTextAlignment="Center" FontSize="Title" />
+            <Label Text="Fecha(Hoy):"/>
             <DatePicker x:Name="date" />
-            <Label Text="Granja:"/>
-            
-            <Editor x:Name="editGranja" />
+            <Entry x:Name="editMort" Keyboard="Numeric" Placeholder="Mortalidad" />
+
+
             <Button x:Name="btn1" Text="Agregar datos"  />
-            <Button x:Name="btn2" Text="Mostrar lista" Clicked="btn2_click"/>
             <ListView x:Name="lstMort">
                 <ListView.ItemTemplate >
                     <DataTemplate >
