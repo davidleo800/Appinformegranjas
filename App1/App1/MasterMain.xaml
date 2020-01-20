@@ -8,7 +8,7 @@
              Title="Main">
     <ContentPage.Content>
         <StackLayout BackgroundColor="#D4E1F4">
-            <Button Text="Identificarme" BackgroundColor="Transparent" Clicked="btnIdentificar" />
+            <Button  Text="Identificarme" BackgroundColor="Transparent" Clicked="BtnIdentificar" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

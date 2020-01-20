@@ -3,14 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppInformeGranjas.View.ViewBultosConsu">
     <ContentPage.Content>
+        
         <StackLayout BackgroundColor="#D4E1F4">
-            <Label Text="Bultos consumidos por día" HorizontalTextAlignment="Center" FontSize="Title" />
+            <Label Text="Consumo de alimento por día" HorizontalTextAlignment="Center" FontSize="Title" />
             <Label Text="Fecha(Hoy):"/>
             <DatePicker x:Name="date" />
-            <Entry x:Name="editbultos" Keyboard="Numeric" Placeholder="Numero de bultos hoy" />
-            <Button x:Name="btn1" Text="Agregar datos" />
-            
-
+            <Entry x:Name="editbultos" Keyboard="Numeric" Placeholder="Consumo de alimento hoy" />
+            <Button x:Name="btn1" Text="Agregar datos" />            
         </StackLayout>
+        
     </ContentPage.Content>
 </ContentPage>

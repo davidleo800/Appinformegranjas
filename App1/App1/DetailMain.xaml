@@ -42,10 +42,12 @@
                 </Grid.ColumnDefinitions>
                 <Button x:Name="btnMort" Text="Mortalidad" BackgroundColor="#429de3" TextColor="#ffffff"
                         BorderColor="#3d85c6" Grid.Row="1" Grid.Column="0" />
-                <Button x:Name="btnBultos" Text="Bultos consumidos" BackgroundColor="#429de3" TextColor="#ffffff"
+                <Button x:Name="btnBultos" Text="Consumo de Alimentos" BackgroundColor="#429de3" TextColor="#ffffff"
                         BorderColor="#3d85c6" Grid.Row="1" Grid.Column="1" />
                 <Button x:Name="btnPeso" Text="Peso Promedio" BackgroundColor="#429de3" TextColor="#ffffff"
                         BorderColor="#3d85c6" Grid.Row="1" Grid.Column="2" />
+                <Button x:Name="btnReporte" Text="Reporte" BackgroundColor="#429de3" TextColor="#ffffff"
+                        BorderColor="#3d85c6" Grid.Row="2" Grid.Column="1" />
             </Grid>
 
 
