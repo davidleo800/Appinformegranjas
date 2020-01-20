@@ -1,5 +1,6 @@
 ﻿namespace AppInformeGranjas
 {
+    using Android.Widget;
     using AppInformeGranjas.View;
     using Xamarin.Forms;
     using Xamarin.Forms.Xaml;
@@ -7,6 +8,7 @@
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class DetailMain : ContentPage
     {
+        
         public DetailMain()
         {
             InitializeComponent();

@@ -16,9 +16,19 @@
             <Label Text="Seleccione una opción para ingresar los datos correspondientes:"
                    FontSize="Body" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Start" />
             <Label Text="Granja:"/>
-            <Editor x:Name="editGranja" />
+            <Picker x:Name="pk1" SelectedIndex="1">
+                <Picker.Items>
+                    <x:String>Granja 1</x:String>
+                    <x:String>Granja 2</x:String>
+                </Picker.Items>
+            </Picker>
             <Label Text="Galpon:"/>
-            <Editor x:Name="editGalpon" />
+            <Picker x:Name="pk2" SelectedIndex="1">
+                <Picker.Items>
+                    <x:String>Galpon 1</x:String>
+                    <x:String>Galpon 2</x:String>
+                </Picker.Items>
+            </Picker>
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="60" />
@@ -37,6 +47,7 @@
                 <Button x:Name="btnPeso" Text="Peso Promedio" BackgroundColor="#429de3" TextColor="#ffffff"
                         BorderColor="#3d85c6" Grid.Row="1" Grid.Column="2" />
             </Grid>
+
 
         </StackLayout>
     </ScrollView>

@@ -1,33 +1,49 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppInformeGranjas.ViewMortalidad">
+             x:Class="AppInformeGranjas.ViewMortalidad"
+             xmlns:controls="clr-namespace:Xamarin.Plugin.Calendar.Controls;assembly=Xamarin.Plugin.Calendar"
+             >
     <ScrollView>
         <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="Center" BackgroundColor="#D4E1F4">
-
             <Label Text="Mortalidad Diaria" HorizontalTextAlignment="Center" FontSize="Title" />
             <Label Text="Fecha(Hoy):"/>
             <DatePicker x:Name="date" />
             <Entry x:Name="editMort" Keyboard="Numeric" Placeholder="Mortalidad" />
-
-
             <Button x:Name="btn1" Text="Agregar datos"  />
+            <controls:Calendar
+                Events="{Binding Events}">
+                <controls:Calendar.EventTemplate>
+                    <DataTemplate>
+                        <StackLayout
+                Padding="15,0,0,0">
+                            <Label
+                    Text="{Binding Name}"
+                    FontAttributes="Bold"
+                    FontSize="Medium" />
+                            <Label
+                    Text="{Binding Description}"
+                    FontSize="Small"
+                    LineBreakMode="WordWrap" />
+                        </StackLayout>
+                    </DataTemplate>
+                </controls:Calendar.EventTemplate>
+            </controls:Calendar>
             <ListView x:Name="lstMort">
                 <ListView.ItemTemplate >
                     <DataTemplate >
                         <ViewCell>
                             <StackLayout Orientation="Horizontal">
-                                <Label Text="{Binding codigo}"/>
+
                                 <Label Text="{Binding fecha}"/>
-                                <Label Text="{Binding granja}"/>
-                                <Label Text="{Binding galpon}"/>
                                 <Label Text="{Binding mortalidad}"/>
+                                <Label x:Name="lbTotal" Text="" />
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
-                
             </ListView>
+            
         </StackLayout>
        
     </ScrollView>

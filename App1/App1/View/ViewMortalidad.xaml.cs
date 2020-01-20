@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using AppInformeGranjas.Models;
+using Xamarin.Plugin.Calendar.Models;
 namespace AppInformeGranjas
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
@@ -16,7 +17,8 @@ namespace AppInformeGranjas
 		{
 			InitializeComponent ();
 			listaRegistros();
-		}
+			
+	}
 
 		private async void listaRegistros() {
 
@@ -26,12 +28,16 @@ namespace AppInformeGranjas
 
 				if (res != null) {
 					lstMort.ItemsSource = res;
+				
+					
 				}
 			}
 			catch (Exception e1) {
 			
 			}
 		}
+		public EventCollection Events { get; private set; }
+
 
 	}
 }

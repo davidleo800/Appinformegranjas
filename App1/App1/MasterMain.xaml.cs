@@ -21,7 +21,7 @@ namespace AppInformeGranjas
         private async void btnIdentificar(object sender, EventArgs args)
         {
             var context = Android.App.Application.Context;
-            Toast.MakeText(context, "Identificacion", ToastLength.Long).Show();
+            Toast.MakeText(context, "Identificacion", ToastLength.Long).Show(); 
         }
     }
 }
