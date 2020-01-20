@@ -9,9 +9,8 @@
             <Label Text="Fecha(Hoy):"/>
             <DatePicker x:Name="date" />
             <Entry x:Name="editMort" Keyboard="Numeric" Placeholder="Mortalidad" />
-
-
             <Button x:Name="btn1" Text="Agregar datos"  />
+
             <ListView x:Name="lstMort">
                 <ListView.ItemTemplate >
                     <DataTemplate >
