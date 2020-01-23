@@ -3,14 +3,20 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using System.IO;
 using AppInformeGranjas.DataBase;
+using AppInformeGranjas.Login;
+using App1;
+using AppInformeGranjas;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 
 namespace App1
 {
-    public partial class App : Application
+    public partial class App : Application, ILoginManager
     {
         static DataBaseMort database;
+        static ILoginManager loginManager;
+        public static App Current;
+        public static int val;
 
         public static DataBaseMort Database
         {
@@ -28,7 +34,16 @@ namespace App1
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new AppInformeGranjas.SplashPage());
+            MainPage = new NavigationPage(new AppInformeGranjas.SplashPage())
+
+            Current = this;
+            var isLoggedIn = Properties.ContainsKey("IsLoggedIn") ? (bool)Properties["IsLoggedIn"] : false;
+            if (isLoggedIn)
+                
+                MainPage = new Inicio();
+            else
+                MainPage = new LoginModalPage(this);
+
         }
 
         protected override void OnStart()
@@ -44,6 +59,17 @@ namespace App1
         protected override void OnResume()
         {
             // Handle when your app resumes
+        }
+
+        public void ShowMainPage()
+        {
+            MainPage = new DetailMain();
+        }
+
+        public void Logout()
+        {
+            Properties["IsLoggedIn"] = false;
+            MainPage = new  LoginModalPage(this);
         }
     }
 }
