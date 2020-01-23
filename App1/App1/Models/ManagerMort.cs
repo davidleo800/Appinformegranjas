@@ -9,10 +9,11 @@ namespace AppInformeGranjas.Models
 {
     class ManagerMort
     {
+        HttpClient client;
         const String URL = "https://weakened-bet.000webhostapp.com/Webservicexamarin/WebService.php";
         private HttpClient getClient() {
 
-            HttpClient client = new HttpClient();
+            client = new HttpClient();
 
             client.DefaultRequestHeaders.Add("Accept","application/json");
             client.DefaultRequestHeaders.Add("Connection", "close");
@@ -23,7 +24,7 @@ namespace AppInformeGranjas.Models
 
         public async Task<IEnumerable<Mortalidad>> getMoritalidad() {
 
-            HttpClient client = getClient();
+            client = getClient();
             var res = await client.GetAsync(URL);
             if (res.IsSuccessStatusCode) {
                 string content = await res.Content.ReadAsStringAsync();
@@ -32,6 +33,9 @@ namespace AppInformeGranjas.Models
             return Enumerable.Empty<Mortalidad>();
         
         }
+
+     
+
 
 
     }
