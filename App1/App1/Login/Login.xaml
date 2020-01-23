@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AppInformeGranjas.Login.Login">
+    
+    <ContentPage.Content>
+        <StackLayout Padding="20" Spacing="30">
+            <Image Source="logo.png" WidthRequest="200" HeightRequest="150" />
+            <Label Text="Introduce Usuario" />
+            <Entry x:Name="Username" Placeholder="Nicolas" />
+            <Button Text="Iniciar Sesion" Clicked="btnLoginClick" BackgroundColor="LawnGreen" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
