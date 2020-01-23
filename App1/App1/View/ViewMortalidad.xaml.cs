@@ -8,7 +8,6 @@ using AppInformeGranjas.Models;
 
 namespace AppInformeGranjas
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class ViewMortalidad : ContentPage
 	{
 		public ViewMortalidad()
@@ -17,7 +16,6 @@ namespace AppInformeGranjas
 			listaRegistros();
 
 			btn1.Clicked += (sender, e) => {
-				((NavigationPage)this.Parent).PushAsync(new DataBase.DataPage());
 			};
 		}
 		
