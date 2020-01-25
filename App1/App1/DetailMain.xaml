@@ -40,7 +40,7 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                <Button x:Name="btnMort" Text="Mortalidad" BackgroundColor="#429de3" TextColor="#ffffff"
+                <Button x:Name="btnMort" Text="ViewV" BackgroundColor="#429de3" TextColor="#ffffff"
                         BorderColor="#3d85c6" Grid.Row="1" Grid.Column="0" />
                 <Button x:Name="btnBultos" Text="Consumo de Alimentos" BackgroundColor="#429de3" TextColor="#ffffff"
                         BorderColor="#3d85c6" Grid.Row="1" Grid.Column="1" />

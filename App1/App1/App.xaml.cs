@@ -2,6 +2,7 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using System.IO;
+using AppInformeGranjas.Models;
 
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
@@ -10,10 +11,11 @@ namespace App1
 {
     public partial class App : Application
     {
-        public App()
+        public App(String filename)
         {
             InitializeComponent();
 
+            UserRepository.Inicializador(filename);
             MainPage = new NavigationPage(new AppInformeGranjas.SplashPage());
 
         }

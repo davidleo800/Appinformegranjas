@@ -24,7 +24,7 @@ namespace AppInformeGranjas.Models
             {
                 throw new ArgumentNullException();
             }
-            if (Instancia != null)
+            if (instancia != null)
             {
                 instancia.con.Close();
             }
@@ -36,6 +36,7 @@ namespace AppInformeGranjas.Models
         private UserRepository(string dbPath) {
             con = new SQLiteConnection(dbPath);
             con.CreateTable<tb_login>();
+            con.CreateTable<tb_detalles>();
 
         }
 
@@ -57,6 +58,33 @@ namespace AppInformeGranjas.Models
             return result;
         }
 
+        public int AddnewDetalle(DateTime fecha, int granja,
+            int galpon, int galponero, int mortalidad, decimal alimento, decimal peso,
+            int veterinario)
+        {
+            int result = 0;
+            try
+            {
+                result = con.Insert(new tb_detalles()
+                {
+                    fecha = fecha,
+                    granja = granja,
+                    galpon = galpon,
+                    galponero = galponero,
+                    mortalidad = mortalidad,
+                    alimento = alimento,
+                    peso = peso,
+                    veterinario = veterinario
+                });
+                EstadoMensaje = string.Format("Cantidad de filas afectadas {0}", result);
+            }
+            catch (Exception e)
+            {
+                EstadoMensaje = e.Message;
+            }
+            return result;
+        }
+
         public IEnumerable<tb_login> GetAllLogin() {
             try {
                 return con.Table<tb_login>();
@@ -65,6 +93,17 @@ namespace AppInformeGranjas.Models
             }
             return System.Linq.Enumerable.Empty<tb_login>();
         }
-
+        public IEnumerable<tb_detalles> GetAllDetalle()
+        {
+            try
+            {
+                return con.Table<tb_detalles>();
+            }
+            catch (Exception e)
+            {
+                EstadoMensaje = e.Message;
+            }
+            return System.Linq.Enumerable.Empty<tb_detalles>();
+        }
     }
 }

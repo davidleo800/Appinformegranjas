@@ -23,19 +23,25 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="View\ViewMainGalponero.xaml.cs">
+      <DependentUpon>ViewMainGalponero.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="View\ViewMainVeterinario.xaml.cs">
+      <DependentUpon>ViewMainVeterinario.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
     <EmbeddedResource Update="DetailMain.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="MasterMain.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="View\ViewBultosConsu.xaml">
+    <EmbeddedResource Update="View\ViewMainGalponero.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="View\ViewMortalidad.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="View\ViewPesoPromedio.xaml">
+    <EmbeddedResource Update="View\ViewMainVeterinario.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

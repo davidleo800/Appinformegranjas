@@ -19,7 +19,8 @@ namespace App1.Droid
 
             base.OnCreate(savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-            LoadApplication(new App());
+            string dbPath = FileAccess.GetLocalFilePath("dbcontrol_pollos_engorde");
+            LoadApplication(new App(dbPath));
         }
     }
 }

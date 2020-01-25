@@ -22,10 +22,7 @@
             btnBultos.Clicked += (sender, e) => {
                 ((NavigationPage)this.Parent).PushAsync(new ViewBultosConsu());
             };
-            //Boton que redirige a vista formulario ViewPesoPromedio
-            btnPeso.Clicked += (sender, e) => {
-                ((NavigationPage)this.Parent).PushAsync(new ViewPesoPromedio());
-            }; 
+            
         }
        
       

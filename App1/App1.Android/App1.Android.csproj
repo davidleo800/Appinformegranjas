@@ -74,6 +74,7 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FileAccess.cs" />
     <Compile Include="ISQLiteDbInterface_Android.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
