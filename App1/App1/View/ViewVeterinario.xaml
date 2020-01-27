@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AppInformeGranjas.View.ViewVeterinario">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="Center" BackgroundColor="#D4E1F4">
+
+                <Label Text="ViewMain Veterinario" HorizontalTextAlignment="Center" FontSize="Title" />
+                <Label Text="Fecha(Hoy):"/>
+                <DatePicker x:Name="date" />
+                <Picker x:Name="listPicker"></Picker>
+                <Button x:Name="btn1" Text="Agregar datos"  />
+                <Button x:Name="btnConsult" Text="Reporte" Clicked="btnConsult_Clicked" />
+                <Grid>
+                    <Label Text="Fecha"/>
+                    <Label Grid.Column="1" Text="Granja"/>
+                    <Label Grid.Column="2" Text="Galpon"/>
+                    <Label Grid.Column="3" Text="Galponero"/>
+                    <Label Grid.Column="4" Text="Mortalidad"/>
+                    <Label Grid.Column="5" Text="Alimento"/>
+                    <Label Grid.Column="6" Text="Peso"/>
+                    <Label Grid.Column="7" Text="Veterinario"/>
+                </Grid>
+                <ListView x:Name="lstDetalles">
+                    <ListView.ItemTemplate >
+                        <DataTemplate >
+                            <ViewCell>
+                                <Grid>
+                                    <Label Text="{Binding fecha}"/>
+                                    <Label Grid.Column="1" Text="{Binding granja}"/>
+                                    <Label Grid.Column="2" Text="{Binding galpon}"/>
+                                    <Label Grid.Column="3" Text="{Binding galponero}"/>
+                                    <Label Grid.Column="4" Text="{Binding mortalidad}"/>
+                                    <Label Grid.Column="5" Text="{Binding alimento}"/>
+                                    <Label Grid.Column="6" Text="{Binding peso}"/>
+                                    <Label Grid.Column="7" Text="{Binding veterinario}"/>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+
+                </ListView>
+            </StackLayout>
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -16,8 +16,6 @@
             InitializeComponent();
             this.Master = new MasterMain();
             this.Detail = new NavigationPage(new DetailMain());
-            ConnectMysql con = new ConnectMysql();
-            con.Connection();
             
             
         }

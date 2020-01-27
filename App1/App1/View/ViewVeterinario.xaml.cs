@@ -7,20 +7,20 @@ using Xamarin.Forms.Xaml;
 using AppInformeGranjas.Models;
 using Android.Widget;
 
-namespace AppInformeGranjas
+namespace AppInformeGranjas.View
 {
-	public partial class ViewMortalidad : ContentPage
-	{
-		public ViewMortalidad()
-		{
-			InitializeComponent();
-			//listaRegistros();
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class ViewVeterinario : ContentPage
+    {
+        public ViewVeterinario()
+        {
+            InitializeComponent();
 			NavigationPage.SetHasBackButton(this, false);
-
 		}
-		
 
-		private async void listaRegistros() {
+
+		private async void listaRegistros()
+		{
 			/*
 		try {
 		ManagerMort manager = new ManagerMort();
@@ -39,8 +39,8 @@ namespace AppInformeGranjas
 		{
 			var allDetalle = UserRepository.Instancia.GetAllDetalle();
 			lstDetalles.ItemsSource = allDetalle;
-			
-			
+
+
 			var context = Android.App.Application.Context;
 			Toast.MakeText(context, UserRepository.Instancia.EstadoMensaje,
 				ToastLength.Long).Show();

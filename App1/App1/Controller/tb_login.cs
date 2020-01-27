@@ -17,5 +17,6 @@
         [MaxLength(11)]
         public int usuario { get; set; }
 
+        public tb_login() { }
     }
 }

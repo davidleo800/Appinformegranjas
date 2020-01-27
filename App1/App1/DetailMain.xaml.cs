@@ -18,10 +18,7 @@
             btnMort.Clicked += (sender, e) => {
                 ((NavigationPage)this.Parent).PushAsync(new ViewMortalidad());
             };
-            //Boton que redirige a vista formulario ViewBultosConsu
-            btnBultos.Clicked += (sender, e) => {
-                ((NavigationPage)this.Parent).PushAsync(new ViewBultosConsu());
-            };
+           
             
         }
        

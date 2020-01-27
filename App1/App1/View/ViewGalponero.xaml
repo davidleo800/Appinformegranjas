@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AppInformeGranjas.View.ViewGalponero">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout BackgroundColor="#D4E1F4">
+                <Label Text="Registro de formato de control de pollos de engorde"
+                   HorizontalTextAlignment="Center" FontSize="Title" />
+
+                <Label Text="Fecha(Hoy):"/>
+                <DatePicker x:Name="date" />
+                <Entry x:Name="txtGranja" Keyboard="Numeric" 
+                   Placeholder="Granja" />
+                <Entry x:Name="txtGalpon" Keyboard="Numeric" 
+                   Placeholder="Galpon" />
+                <Entry x:Name="txtGalponero" Keyboard="Numeric" 
+                   Placeholder="Galponero" />
+                <Entry x:Name="txtMort" Keyboard="Numeric" 
+                   Placeholder="Mortalidad" />
+                <Entry x:Name="txtAlimento" Keyboard="Numeric" 
+                   Placeholder="Alimento" />
+                <Entry x:Name="txtPeso" Keyboard="Numeric" 
+                   Placeholder="Peso" />
+                <Entry x:Name="txtVeterinario" Keyboard="Numeric" 
+                   Placeholder="txtVeterinario" />
+                <Button x:Name="btnInsert" Text="Agregar datos" 
+                    Clicked="btnInsert_Clicked" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

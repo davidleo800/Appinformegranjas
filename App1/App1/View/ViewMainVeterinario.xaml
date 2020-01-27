@@ -8,27 +8,24 @@
             <Label Text="ViewMain Veterinario" HorizontalTextAlignment="Center" FontSize="Title" />
             <Label Text="Fecha(Hoy):"/>
             <DatePicker x:Name="date" />
-            <Entry x:Name="editMort" Keyboard="Numeric" Placeholder="Mortalidad" />
+            <Picker x:Name="listPicker"></Picker>
             <Button x:Name="btn1" Text="Agregar datos"  />
             <Button x:Name="btnConsult" Text="Reporte" Clicked="btnConsult_Clicked" />
-            
-            <ListView x:Name="lstDetalles">
+            <Grid>
+                <Label Text="Fecha"/>
+                <Label Grid.Column="1" Text="Granja"/>
+                <Label Grid.Column="2" Text="Galpon"/>
+                <Label Grid.Column="3" Text="Galponero"/>
+                <Label Grid.Column="4" Text="Mortalidad"/>
+                <Label Grid.Column="5" Text="Alimento"/>
+                <Label Grid.Column="6" Text="Peso"/>
+                <Label Grid.Column="7" Text="Veterinario"/>
+            </Grid>
+           <ListView x:Name="lstDetalles">
                 <ListView.ItemTemplate >
                     <DataTemplate >
                         <ViewCell>
                             <Grid>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Grid.Row="0" />
-                                </Grid.RowDefinitions>
-                                <Label Text="Fecha"/>
-                                <Label Grid.Column="1" Text="Granja"/>
-                                <Label Grid.Column="2" Text="Galpon"/>
-                                <Label Grid.Column="3" Text="Galponero"/>
-                                <Label Grid.Column="4" Text="Mortalidad"/>
-                                <Label Grid.Column="5" Text="Alimento"/>
-                                <Label Grid.Column="6" Text="Peso"/>
-                                <Label Grid.Column="7" Text="Veterinario"/>
-
                                 <Label Text="{Binding fecha}"/>
                                 <Label Grid.Column="1" Text="{Binding granja}"/>
                                 <Label Grid.Column="2" Text="{Binding galpon}"/>

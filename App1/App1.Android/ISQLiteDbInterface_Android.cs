@@ -13,7 +13,6 @@ using Android.Widget;
 using AppInformeGranjas.Models;
 using SQLite;
 
-
 namespace App1.Droid
 {
     public class ISQLiteDbInterface_Android : ISQLiteInterface

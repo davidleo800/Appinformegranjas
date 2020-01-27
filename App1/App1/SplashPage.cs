@@ -1,4 +1,5 @@
 ﻿using App1;
+using AppInformeGranjas.View;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -35,7 +36,7 @@ namespace AppInformeGranjas
             await splashImage.ScaleTo(1, 2000);//tiempo procesado en consumo para inicializar
             await splashImage.ScaleTo(0.9, 1500, Easing.Linear);
             //await splashImage.ScaleTo(150, 1200, Easing.Linear);
-            Application.Current.MainPage = new NavigationPage(new MainPage());
+            Application.Current.MainPage = new NavigationPage(new LoginView());
         }
     }
     
